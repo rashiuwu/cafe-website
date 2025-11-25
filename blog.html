@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cz Café</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            padding: 10px 20px;
+        }
+        
+        /* Logo Styling */
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+        
+        /* Title Styling */
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 2px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        /* Navigation Menu Styling */
+        nav {
+            display: flex;
+            gap: 5px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            
+            border-radius: 5px;
+        }
+        
+            </style>
+            
+        </head>
+        <body>
+            <header>
+                <div class="navbar">
+                    <a href="index.html" class="logo">
+                        <img src="cafe.png" alt="Czyprotex Logo"/>
+                    </a>
+                    <h1 class="title">Czyprotex Sips & Snaps</h1>
+                    <nav>
+                        <a href="http://localhost/register.php">Register</a>
+                        <a href="http://localhost/login.php">Login</a>
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="about.html">About Us</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="events.html">Events</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="http://localhost/contact.php">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+    <section>
+        <h2>Our Latest Articles</h2>
+        <article>
+            <h3>The Art of Brewing the Perfect Coffee</h3>
+            <p>Discover tips and tricks for brewing coffee like a pro!</p>
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/52/a0/a4/nini-s-station-the-week.jpg" height="400">
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2005 Czyprotex Café</p>
+    </footer>
+</body>
+</html>

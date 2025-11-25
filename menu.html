@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czyprotex Café - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 40px;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%;
+            padding: 15px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item img {
+            width: 50%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-item h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .add-ons {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .add-ons label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .cart-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ffaaa5;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .cart-button:hover {
+            background-color: #ff8b94;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 100%;
+            }
+            section {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        /* Logo Styling */
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 2px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+            display: flex;
+            gap: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="cafe.png" alt="Czyprotex Logo"/>
+            </a>
+            <h1 class="title">Czyprotex Sips & Snaps</h1>
+            <nav>
+                <a href="http://localhost/register.php">Register</a>
+                <a href="http://localhost/login.php">Login</a>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="http://localhost/contact.php">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <!-- Espresso -->
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/736x/8f/85/99/8f8599d7bccaed2c2f6c6d702123dcd6.jpg" alt="Espresso">
+            <h3>Espresso - Rs.120</h3>
+            <p>A strong, bold coffee to start your day.</p>
+            <div class="add-ons">
+                <strong>Add-ons:</strong>
+                <label><input type="checkbox" value="Extra Shot" data-price="30"> Extra Shot (+Rs.30)</label>
+                <label><input type="checkbox" value="Whipped Cream" data-price="20"> Whipped Cream (+Rs.20)</label>
+            </div>
+            <button class="cart-button" onclick="placeOrder('espresso', 120, this)">Add to Cart</button>
+        </div>
+
+        <!-- Cappuccino -->
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/736x/66/c3/00/66c300fdbb9137cd417430404c93eaf5.jpg" alt="Cappuccino">
+            <h3>Cappuccino - Rs.150</h3>
+            <p>A perfect blend of espresso and milk foam.</p>
+            <div class="add-ons">
+                <strong>Add-ons:</strong>
+                <label><input type="checkbox" value="Chocolate Syrup" data-price="25"> Chocolate Syrup (+Rs.25)</label>
+                <label><input type="checkbox" value="Cinnamon" data-price="15"> Cinnamon (+Rs.15)</label>
+            </div>
+            <button class="cart-button" onclick="placeOrder('cappuccino', 150, this)">Add to Cart</button>
+        </div>
+
+        <!-- Bubble Tea -->
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/736x/5a/ea/e0/5aeae0648817225331ba38bc9c441529.jpg" alt="Bubble Tea">
+            <h3>Bubble Tea - Rs.180</h3>
+            <p>Sweet, creamy, and chewy tapioca pearls with flavorful tea.</p>
+            <div class="add-ons">
+                <strong>Add-ons:</strong>
+                <label><input type="checkbox" value="Extra Tapioca Pearls" data-price="30"> Extra Tapioca Pearls (+Rs.30)</label>
+                <label><input type="checkbox" value="Honey" data-price="20"> Honey (+Rs.20)</label>
+            </div>
+            <button class="cart-button" onclick="placeOrder('bubbletea', 180, this)">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2005 Czyprotex Café</p>
+    </footer>
+
+    <script>
+        function placeOrder(product, basePrice, button) {
+            const menuItem = button.closest('.menu-item');
+            const checkboxes = menuItem.querySelectorAll('.add-ons input[type="checkbox"]:checked');
+
+            let addOns = [];
+            let totalPrice = basePrice;
+
+            checkboxes.forEach(checkbox => {
+                addOns.push(checkbox.value);
+                totalPrice += parseInt(checkbox.getAttribute('data-price'));
+            });
+
+            const orderDetails = {
+                name: menuItem.querySelector("h3").innerText.split(" - ")[0],
+                image: menuItem.querySelector("img").src,
+                totalPrice: totalPrice,
+                addOns: addOns
+            };
+
+            localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+            window.location.href = "CONFIRM_PURCHASE.html";
+        }
+    </script>
+</body>
+</html>

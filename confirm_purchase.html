@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Purchase - Czyprotex Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .confirmation {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .confirmation img {
+            width: 300px;
+            border-radius: 10px;
+        }
+        .price-box {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        input {
+            padding: 8px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #ffaaa5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            width: auto;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="cafe.png" alt="Czyprotex Logo"/>
+            </a>
+            <h1 class="title">Czyprotex Sips & Snaps</h1>
+            <nav>
+                <a href="http://localhost/register.php">Register</a>
+                <a href="http://localhost/login.php">Login</a>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="events.html">Events</a>
+                <a href="blog.html">Blog</a>
+                <a href="http://localhost/contact.php">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="confirmation">
+        <h2>You have selected:</h2>
+        <p id="product-name"></p>
+        <img id="product-image" src="" alt="Selected Item">
+        <p class="price-box">Total Price: Rs. <span id="total-price">0</span></p>
+        
+        <p id="add-ons"></p> <!-- ✅ Add-ons display area -->
+
+        <input type="text" id="coupon-code" placeholder="Enter discount code">
+        <button onclick="applyDiscount()">Apply Coupon</button>
+        
+        <h3>Please confirm your purchase</h3>
+        <button><a href="thankyou.html">Order now</a></button>
+        <button><a href="menu.html">Cancel</a></button>
+    </section>
+
+    <footer>
+        <p>&copy; 2005 Czyprotex Café</p>
+    </footer>
+
+    <script>
+        // Retrieve order details from localStorage
+        let orderDetails = JSON.parse(localStorage.getItem('orderDetails'));
+    
+        if (orderDetails) {
+            document.getElementById('product-name').innerText = orderDetails.name;
+            document.getElementById('product-image').src = orderDetails.image;
+            document.getElementById('total-price').innerText = orderDetails.totalPrice;
+    
+            if (orderDetails.addOns.length > 0) {
+                document.getElementById('add-ons').innerText = `Add-ons: ${orderDetails.addOns.join(", ")}`;
+            } else {
+                document.getElementById('add-ons').innerText = "No add-ons selected";
+            }
+        } else {
+            console.log("No order details found.");
+        }
+    
+        // List of valid coupon codes and their discount amounts
+        const coupons = {
+            "SAVE10": 10,   // 10% off
+            "SAVE20": 20,   // 20% off
+            "CAFE50": 50    // Flat Rs.50 off
+        };
+    
+        function applyDiscount() {
+            const couponCode = document.getElementById('coupon-code').value.toUpperCase();
+            let totalPrice = parseFloat(orderDetails.totalPrice); // Convert to number
+    
+            if (coupons[couponCode]) {
+                let discount = coupons[couponCode];
+    
+                if (discount < 100) {
+                    // Percentage discount
+                    totalPrice = totalPrice - (totalPrice * (discount / 100));
+                } else {
+                    // Fixed amount discount
+                    totalPrice = totalPrice - discount;
+                }
+    
+                if (totalPrice < 0) totalPrice = 0; // Ensure price doesn't go negative
+    
+                // Update total price in localStorage
+                orderDetails.totalPrice = totalPrice.toFixed(2);
+                localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+    
+                // Update price on screen
+                document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+    
+                alert(`Coupon applied! New total: Rs. ${totalPrice.toFixed(2)}`);
+            } else {
+                alert("Invalid coupon code. Please try again.");
+            }
+        }
+    </script>
+    
+</body>
+</html>
