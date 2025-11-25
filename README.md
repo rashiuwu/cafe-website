@@ -17,7 +17,6 @@ Czyprotex Sips & Snaps is a frontend + backend café website that includes:
 ---
 
 ## 📌 **Pages Included**
-
 ### **🏠 Home Page**
 
 Features a full hero section with café vibes and branding.
@@ -114,8 +113,6 @@ The entire project uses **styles.css**, featuring:
 ---
 
 ## 🚀 **Live Deployment**
-
-If your GitHub repo name is `cafe-website` and username is **rashiuwu**, your live URL is:
 
 👉 [https://rashiuwu.github.io/cafe-website/](https://rashiuwu.github.io/cafe-website/)
 
