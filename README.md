@@ -1,99 +1,77 @@
-# ☕ Czyprotex Sips & Snaps — Café Website
+# ☕✨ **Czyprotex Sips & Snaps — Café Website**
 
-A complete aesthetic café website created using **HTML**, **CSS**, **JavaScript**, and **PHP**, designed around a clean pastel theme and Gen-Z café vibe.
+> *A pastel-themed Gen-Z café website serving aesthetics, good vibes, and great code.*
 
----
-
-## 🌟 Overview
-
-Czyprotex Sips & Snaps is a frontend + backend café website that includes:
-
-* Fully designed UI pages
-* Interactive menu and cart logic
-* Order confirmation with coupon system
-* PHP-based login, register, and contact support
-* Beautiful images and responsive layouts
+Welcome to **Czyprotex Sips & Snaps**, a modern café website built with **HTML, CSS, JavaScript, and PHP**, designed to feel soft, cozy, aesthetic — just like your dream café corner.
 
 ---
 
-## 📌 **Pages Included**
-### **🏠 Home Page**
+## 🌸 **Preview**
 
-Features a full hero section with café vibes and branding.
+A multi-page website featuring:
 
-
----
-
-### **ℹ️ About Us Page**
-
-Tells the story of the café with images and descriptions.
-
+* Beautiful hero sections
+* Smooth navigation
+* Menu with add-ons
+* Order confirmation with coupon logic
+* Gallery, Events, Blog sections
+* PHP-based login/register/contact pages
 
 ---
 
-### **📝 Blog Page**
+## 🌿 **Features**
 
-Contains café-related articles and images.
+### 🏡 **Home Page**
 
-
----
-
-### **📸 Gallery Page**
-
-A curated grid gallery of café images.
+Full hero banner + clean navbar and logo.
 
 
----
+### 👩‍🍳 **About Us**
 
-### **📅 Events Page**
-
-Displays upcoming events + embedded YouTube content.
+Your café story with image + text layout.
 
 
----
+### 📝 **Blog**
 
-### **🍽 Menu Page**
-
-Includes items, add-ons, and interactive order selection using JS + localStorage.
+Articles, images, and café lifestyle content.
 
 
----
+### 📸 **Gallery**
 
-### **🛒 Confirm Purchase Page**
-
-Shows selected dish, total price, add-ons, and coupon support.
+Aesthetic photo grid of café interiors & vibes.
 
 
----
+### 🎉 **Events**
 
-### **🎉 Thank You Page**
-
-Displayed after confirming purchase.
+Embedded YouTube videos + upcoming events.
 
 
----
+### 🍽 **Menu**
 
-### **🔐 PHP Authentication Pages** (Localhost only)
+Interactive menu with add-ons, JS price calculation, and localStorage order system.
 
-* `login.php`
-* `logout.php`
-* `register.php`
-* `dashboard.php`
-* `contact.php`
 
-*(PHP files run on XAMPP/localhost only — not on GitHub Pages.)*
+### 🧾 **Confirm Purchase**
+
+Coupon codes, total price calculations, and order summary.
+
+
+### 💖 **Thank You Page**
+
+A warm thank-you screen after order completion.
+
 
 ---
 
 ## 🎨 **Styling**
 
-The entire project uses **styles.css**, featuring:
+Everything is styled through `styles.css`, featuring:
 
-* Soft pastel palette
-* Responsive sections
-* Styled buttons + hover animations
-* Gallery grid layout
+* Soft pastel background
+* Modern card layouts
+* Hover effects
 * Clean typography
+* Curved buttons & minimal shadows
 
 
 
@@ -101,46 +79,26 @@ The entire project uses **styles.css**, featuring:
 
 ## 🛠 **Tech Stack**
 
-| Feature       | Technology                   |
-| ------------- | ---------------------------- |
-| Structure     | HTML5                        |
-| Styling       | CSS3                         |
-| Interactivity | JavaScript                   |
-| Backend       | PHP                          |
-| Database      | MySQL                        |
-| Deployment    | GitHub Pages (Frontend only) |
+| Layer      | Tech                         |
+| ---------- | ---------------------------- |
+| Frontend   | HTML5, CSS3, JavaScript      |
+| Backend    | PHP                          |
+| Database   | MySQL                        |
+| Assets     | External + local images      |
+| Deployment | GitHub Pages (Frontend Only) |
 
 ---
 
-## 🚀 **Live Deployment**
+## 🚀 **Live Demo**
 
-👉 [https://rashiuwu.github.io/cafe-website/](https://rashiuwu.github.io/cafe-website/)
+👉 **[https://rashiuwu.github.io/cafe-website/](https://rashiuwu.github.io/cafe-website/)**
 
-(Only HTML/CSS/JS pages work online — PHP needs hosting.)
-
----
-
-## ⚠️ Important Hosting Note
-
-GitHub Pages **does NOT support PHP**.
-
-Meaning:
-
-✔ Home, About, Gallery, Events, Blog, Menu, Confirm Purchase, Thank You → will work
-❌ Register, Login, Dashboard, Contact (PHP) → will NOT work on GitHub Pages
-
-If you want PHP pages to work online, use:
-
-* 000webhost (free)
-* InfinityFree (free)
-* Hostinger
-* cPanel hosting
-
-I can deploy it for you if you want.
+> Note: Only HTML/CSS/JS pages work on GitHub Pages.
+> PHP pages require a PHP server (XAMPP / Hosting).
 
 ---
 
-## 📁 Folder Structure
+## 📁 **Folder Structure**
 
 ```
 cafe-website/
@@ -163,23 +121,43 @@ cafe-website/
 
 ---
 
-## 🖥 How to Run Locally (Full PHP Version)
+## ⚠️ Hosting Note (Important)
+
+GitHub Pages **cannot run PHP**.
+
+That means:
+
+✔ Frontend pages = LIVE
+❌ login.php, register.php, contact.php = won’t run on GitHub Pages
+
+If you want full backend hosting, options:
+
+* 000webhost (free)
+* InfinityFree (free)
+* Hostinger
+* cPanel hosting
+
+I can move your whole project to online hosting if you want — **just say “host my project online fully”**.
+
+---
+
+## 🧩 **Local Setup (Full PHP + MySQL)**
 
 1. Install **XAMPP**
-2. Copy your project into:
+2. Move files to:
 
 ```
 C:/xampp/htdocs/cafe-website/
 ```
 
 3. Start **Apache** + **MySQL**
-4. Go to browser:
+4. View site:
 
 ```
 http://localhost/cafe-website/index.html
 ```
 
-For PHP pages:
+5. View backend pages:
 
 ```
 http://localhost/cafe-website/login.php
@@ -187,10 +165,11 @@ http://localhost/cafe-website/login.php
 
 ---
 
-## 👩‍💻 Developer
+## 💗 **Credits**
 
-**Rashi Sawardekar**
+**Developer:** *Rashi Sawardekar*
 FYBSc IT — Division B
-Creator of Czyprotex Sips & Snaps Café Website
+Project: *Czyprotex Sips & Snaps Café Website*
 
+---
 
