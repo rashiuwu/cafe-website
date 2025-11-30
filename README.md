@@ -128,6 +128,7 @@ GitHub Pages **cannot run PHP**.
 That means:
 
 ✔ Frontend pages = LIVE
+
 ❌ login.php, register.php, contact.php = won’t run on GitHub Pages
 
 If you want full backend hosting, options:
@@ -136,10 +137,6 @@ If you want full backend hosting, options:
 * InfinityFree (free)
 * Hostinger
 * cPanel hosting
-
-I can move your whole project to online hosting if you want — **just say “host my project online fully”**.
-
----
 
 ## 🧩 **Local Setup (Full PHP + MySQL)**
 
