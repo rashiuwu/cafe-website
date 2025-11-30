@@ -165,7 +165,7 @@ http://localhost/cafe-website/login.php
 ## 💗 **Credits**
 
 **Developer:** *Rashi Sawardekar*
-FYBSc IT — Division B
+<BR>
 Project: *Czyprotex Sips & Snaps Café Website*
 
 ---
